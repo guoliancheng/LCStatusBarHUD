@@ -1,5 +1,5 @@
 # LCStatusBarHUD
-在顶部弹出小提示框,显示提示信息
+在顶部弹出小提示框,显示提示信息<br>
 ![](https://raw.githubusercontent.com/guoliancheng/LCStatusBarHUD/master/screenshots/Untitled1.gif)
 
 使用步骤：
