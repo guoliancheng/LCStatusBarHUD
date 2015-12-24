@@ -13,6 +13,8 @@
 		040AE1381C2BDA6900A53B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040AE1361C2BDA6900A53B16 /* Main.storyboard */; };
 		040AE13A1C2BDA6900A53B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040AE1391C2BDA6900A53B16 /* Assets.xcassets */; };
 		040AE13D1C2BDA6900A53B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040AE13B1C2BDA6900A53B16 /* LaunchScreen.storyboard */; };
+		040AE1461C2BE3D000A53B16 /* LCStatusBarHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 040AE1451C2BE3D000A53B16 /* LCStatusBarHUD.bundle */; };
+		040AE1491C2BE46900A53B16 /* LCStatusBarHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 040AE1481C2BE46900A53B16 /* LCStatusBarHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		040AE1391C2BDA6900A53B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040AE13C1C2BDA6900A53B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040AE13E1C2BDA6900A53B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040AE1451C2BE3D000A53B16 /* LCStatusBarHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LCStatusBarHUD.bundle; sourceTree = "<group>"; };
+		040AE1471C2BE46900A53B16 /* LCStatusBarHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCStatusBarHUD.h; sourceTree = "<group>"; };
+		040AE1481C2BE46900A53B16 /* LCStatusBarHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCStatusBarHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		040AE12C1C2BDA6800A53B16 /* LCStatusBarHUDDemo */ = {
 			isa = PBXGroup;
 			children = (
+				040AE1441C2BE3D000A53B16 /* LCStatusBarHUD */,
 				040AE1301C2BDA6900A53B16 /* AppDelegate.h */,
 				040AE1311C2BDA6900A53B16 /* AppDelegate.m */,
 				040AE1331C2BDA6900A53B16 /* ViewController.h */,
@@ -77,6 +83,16 @@
 				040AE12E1C2BDA6900A53B16 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		040AE1441C2BE3D000A53B16 /* LCStatusBarHUD */ = {
+			isa = PBXGroup;
+			children = (
+				040AE1451C2BE3D000A53B16 /* LCStatusBarHUD.bundle */,
+				040AE1471C2BE46900A53B16 /* LCStatusBarHUD.h */,
+				040AE1481C2BE46900A53B16 /* LCStatusBarHUD.m */,
+			);
+			path = LCStatusBarHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +154,7 @@
 			files = (
 				040AE13D1C2BDA6900A53B16 /* LaunchScreen.storyboard in Resources */,
 				040AE13A1C2BDA6900A53B16 /* Assets.xcassets in Resources */,
+				040AE1461C2BE3D000A53B16 /* LCStatusBarHUD.bundle in Resources */,
 				040AE1381C2BDA6900A53B16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040AE1491C2BE46900A53B16 /* LCStatusBarHUD.m in Sources */,
 				040AE1351C2BDA6900A53B16 /* ViewController.m in Sources */,
 				040AE1321C2BDA6900A53B16 /* AppDelegate.m in Sources */,
 				040AE12F1C2BDA6900A53B16 /* main.m in Sources */,
@@ -300,6 +318,7 @@
 				040AE1431C2BDA6A00A53B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
