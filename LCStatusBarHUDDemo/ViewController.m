@@ -46,7 +46,6 @@
 
 - (IBAction)showLoading {
     [LCStatusBarHUD showLoading:@"登录成功"];
-    
 }
 
 - (IBAction)hideLoading {

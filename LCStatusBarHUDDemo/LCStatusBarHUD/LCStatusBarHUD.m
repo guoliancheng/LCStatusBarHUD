@@ -10,13 +10,13 @@
 
 UIWindow *_window;
 // 窗口的高度
-#define HMWindowHeight 20
+#define LCWindowHeight 20
 // 动画的执行时间
-#define HMDuration 0.5
+#define LCDuration 0.5
 // 窗口的停留时间
-#define HMDelay 1.5
+#define LCDelay 1.5
 // 字体大小
-#define HMFont [UIFont systemFontOfSize:12]
+#define LCFont [UIFont systemFontOfSize:12]
 @implementation LCStatusBarHUD
 
 /**
@@ -34,7 +34,7 @@ UIWindow *_window;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     // 设置按钮文字大小
-    btn.titleLabel.font = HMFont;
+    btn.titleLabel.font = LCFont;
     
     // 切掉文字左边的 10
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
@@ -48,7 +48,7 @@ UIWindow *_window;
     // 窗口背景
     _window.backgroundColor = [UIColor blackColor];
     _window.windowLevel = UIWindowLevelAlert;
-    _window.frame = CGRectMake(0, -HMWindowHeight, [UIScreen mainScreen].bounds.size.width, HMWindowHeight);
+    _window.frame = CGRectMake(0, -LCWindowHeight, [UIScreen mainScreen].bounds.size.width, LCWindowHeight);
     btn.frame = _window.bounds;
     [_window addSubview:btn];
     _window.hidden = NO;
@@ -57,14 +57,14 @@ UIWindow *_window;
     // UIWindowLevelAlert > UIWindowLevelStatusBar > UIWindowLevelNormal
     
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:LCDuration animations:^{
         CGRect frame = _window.frame;
         frame.origin.y = 0;
         _window.frame = frame;
     }completion:^(BOOL finished) {
-        [UIView animateWithDuration:HMDuration delay:HMDelay options:kNilOptions animations:^{
+        [UIView animateWithDuration:LCDuration delay:LCDelay options:kNilOptions animations:^{
             CGRect frame = _window.frame;
-            frame.origin.y = -HMWindowHeight;
+            frame.origin.y = -LCWindowHeight;
             _window.frame = frame;
         } completion:^(BOOL finished) {
             _window = nil;
@@ -88,7 +88,7 @@ UIWindow *_window;
  */
 + (void)showSuccess:(NSString *)msg
 {
-    [self showMessage:msg imageName:@"HMStatusBarHUD.bundle/success"];
+    [self showMessage:msg imageName:@"LCStatusBarHUD.bundle/success"];
 }
 
 /**
@@ -98,7 +98,7 @@ UIWindow *_window;
  */
 + (void)showError:(NSString *)msg
 {
-    [self showMessage:msg imageName:@"HMStatusBarHUD.bundle/error"];
+    [self showMessage:msg imageName:@"LCStatusBarHUD.bundle/error"];
 }
 
 /**
@@ -107,9 +107,9 @@ UIWindow *_window;
 + (void)hideLoading
 {
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:LCDuration animations:^{
         CGRect frame = _window.frame;
-        frame.origin.y = -HMWindowHeight;
+        frame.origin.y = -LCWindowHeight;
         _window.frame = frame;
     }completion:^(BOOL finished) {
         _window = nil;
@@ -131,13 +131,13 @@ UIWindow *_window;
     // 窗口背景
     _window.backgroundColor = [UIColor blackColor];
     _window.windowLevel = UIWindowLevelAlert;
-    _window.frame = CGRectMake(0, -HMWindowHeight, [UIScreen mainScreen].bounds.size.width, HMWindowHeight);
+    _window.frame = CGRectMake(0, -LCWindowHeight, [UIScreen mainScreen].bounds.size.width, LCWindowHeight);
     _window.hidden = NO;
     
     // 文字
     UILabel *label = [[UILabel alloc] init];
     label.frame = _window.bounds;
-    label.font = HMFont;
+    label.font = LCFont;
     label.text = msg;
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
@@ -146,11 +146,11 @@ UIWindow *_window;
     // 圈圈
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [indicatorView startAnimating];
-    indicatorView.frame = CGRectMake(0, 0, HMWindowHeight, HMWindowHeight);
+    indicatorView.frame = CGRectMake(0, 0, LCWindowHeight, LCWindowHeight);
     [_window addSubview:indicatorView];
     
     // 动画
-    [UIView animateWithDuration:HMDuration animations:^{
+    [UIView animateWithDuration:LCDuration animations:^{
         CGRect frame = _window.frame;
         frame.origin.y = 0;
         _window.frame = frame;
